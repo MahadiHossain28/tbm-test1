@@ -16,6 +16,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/ezyang/htmlpurifier" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/fakerphp/faker" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/fidry/cpu-core-counter" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/filp/whoops" />
@@ -42,6 +43,10 @@
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/league/mime-type-detection" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/league/uri" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/league/uri-interfaces" />
+      <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/maatwebsite/excel" />
+      <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/maennchen/zipstream-php" />
+      <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/markbaker/complex" />
+      <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/markbaker/matrix" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/myclabs/deep-copy" />
@@ -61,6 +66,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/phpoffice/phpspreadsheet" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/phpoption/phpoption" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/phpstan/phpdoc-parser" />
       <excludeFolder url="file://$MODULE_DIR$/Backend/vendor/phpunit/php-code-coverage" />
