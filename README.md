@@ -92,8 +92,8 @@ The columns in the error report are:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://your-repository-url.git
-    cd project-directory
+    git clone https://github.com/MahadiHossain28/tbm-test1.git
+    cd tbm-test1
     ```
 
 2.  **Install dependencies:**
