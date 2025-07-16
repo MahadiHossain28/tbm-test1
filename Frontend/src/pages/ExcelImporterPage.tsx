@@ -1,6 +1,8 @@
 import {useState} from "react";
-import api from '../api/axios'
+import api from '@/api/axios.ts'
 import axios from "axios";
+import DropZoneComponent from "@/components/DropZoneComponent.tsx";
+// import FileInputComponent from "@/components/FileInputComponent.tsx";
 
 interface ImportResponse {
     message: string;
@@ -11,10 +13,6 @@ const ExcelImporterPage = () => {
     const [file, setFile] = useState<File | null>(null);
     const [error, setError] = useState<string | null>(null);
     const [response, setResponse] = useState<ImportResponse | null>(null);
-
-    const handleFileChange = (e:any) => {
-        setFile(e.target.files[0]);
-    }
     
     const handleUpload = async () => {
         if (!file) {
@@ -35,7 +33,7 @@ const ExcelImporterPage = () => {
             setError(null);
             setFile(null);
         }
-        catch(err:any){
+        catch(err){
             if(axios.isAxiosError(err) && (err.response && err.response.data)){
                 console.log(err.response.data);
                 if(err.response.data.failures){
@@ -43,8 +41,10 @@ const ExcelImporterPage = () => {
                 }else{
                     setError(err.response.data.message);
                 }
-            }else {
-                setError(err);
+            }else if (err instanceof Error) {
+                setError(err.message);
+            } else {
+                setError('An unexpected error occurred');
             }
         }
     }
@@ -53,21 +53,9 @@ const ExcelImporterPage = () => {
         <div className="max-w-lg mx-auto p-6 bg-white rounded-xl shadow-lg">
             <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Import Users from Excel</h2>
 
-            <div className="mb-4">
-                <label htmlFor="file" className="block text-sm font-medium text-gray-700">Choose File</label>
-                <input
-                    type="file"
-                    accept=".xlsx, .xls, .csv"
-                    onChange={handleFileChange}
-                    id="file"
-                    className="mt-1 w-full px-4 py-2 cursor-pointer border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-black"
-                />
-                {error && (
-                    <p className="text-red-500 text-sm mt-2">
-                        {error}
-                    </p>
-                )}
-            </div>
+            {/*<FileInputComponent onFileChange={setFile} error={error} />*/}
+
+            <DropZoneComponent onFileAccepted={setFile} error={error} />
 
             <div className="flex justify-center items-center mb-4">
                 <button

@@ -39,14 +39,14 @@ class UserImportController extends Controller
                     'message' => 'Import completed with some errors.',
                     'failures' => count($failures),
                     'download_link' => Storage::disk('public')->url($filePath),
-                    'errors' => $usersImport->failures()->map(function ($failure) {
-                        return [
-                            'row' => $failure->row(),
-                            'attribute' => $failure->attribute(),
-                            'errors' => $failure->errors(),
-                            'values' => $failure->values(),
-                        ];
-                    })
+                    //                    'errors' => $usersImport->failures()->map(function ($failure) {
+                    //                        return [
+                    //                            'row' => $failure->row(),
+                    //                            'attribute' => $failure->attribute(),
+                    //                            'errors' => $failure->errors(),
+                    //                            'values' => $failure->values(),
+                    //                        ];
+                    //                    })
                 ], 422);
             }
 
