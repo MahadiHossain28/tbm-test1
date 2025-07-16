@@ -2,6 +2,7 @@
 
 namespace App\Exports;
 
+use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithHeadings;
@@ -15,7 +16,7 @@ class UsersExport implements FromCollection, WithHeadings, WithMapping, ShouldAu
     {
         $this->failures = $failures;
     }
-    public function collection(): \Illuminate\Support\Collection
+    public function collection(): Collection
     {
         return $this->failures;
     }
